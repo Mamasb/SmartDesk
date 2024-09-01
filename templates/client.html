@@ -1,0 +1,50 @@
+
+{% extends "base.html" %}
+{% block title %} Index Page {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{url_for("static", filename="client.css")}}" />
+ <main>
+        <section id="testimonials">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial-container">
+                <div class="testimonial">
+                    <blockquote>
+                        "This service has transformed our approach to education. Highly recommend!"
+                    </blockquote>
+                    <footer>Jane Doe, Educator</footer>
+                </div>
+                <div class="testimonial">
+                    <blockquote>
+                        "A game-changer in student management. Excellent support and features."
+                    </blockquote>
+                    <footer>John Smith, School Administrator</footer>
+                </div>
+                <div class="testimonial">
+                    <blockquote>
+                        "The intuitive interface and powerful tools have made our job so much easier."
+                    </blockquote>
+                    <footer>Emily Johnson, Teacher</footer>
+                </div>
+                <div class="testimonial">
+                    <blockquote>
+                        "Fantastic experience! The system is user-friendly and very effective."
+                    </blockquote>
+                    <footer>Michael Brown, Principal</footer>
+                </div>
+                <div class="testimonial">
+                    <blockquote>
+                        "Exceptional service with great customer support. Highly recommended."
+                    </blockquote>
+                    <footer>Linda Davis, School Manager</footer>
+                </div>
+                <div class="testimonial">
+                    <blockquote>
+                        "An invaluable tool for our educational institution. It's been a huge help."
+                    </blockquote>
+                    <footer>David Wilson, Education Consultant</footer>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

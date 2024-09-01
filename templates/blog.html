@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %} blog {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{url_for("static", filename="blog.css")}}" />
+   <main>
+        <section id="blog-posts" class="container">
+            <h2>Latest Posts</h2>
+            <div class="post-grid">
+                <article class="post">
+                    <img src="https://via.placeholder.com/600x400" alt="Post Image">
+                    <div class="post-content">
+                        <h3><a href="#">Innovative Trends in Education</a></h3>
+                        <p class="meta">September 1, 2024 by Jane Doe</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+                <article class="post">
+                    <img src="https://via.placeholder.com/600x400" alt="Post Image">
+                    <div class="post-content">
+                        <h3><a href="#">The Future of Online Learning</a></h3>
+                        <p class="meta">August 15, 2024 by John Smith</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+                <article class="post">
+                    <img src="https://via.placeholder.com/600x400" alt="Post Image">
+                    <div class="post-content">
+                        <h3><a href="#">How to Engage Students in the Digital Age</a></h3>
+                        <p class="meta">July 30, 2024 by Emma Brown</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %} Program List {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{url_for("static", filename="ProgramList.css")}}" />
+<main>
+        <div class="container">
+            <section id="program-list">
+                <h2>Our Programs</h2>
+                <div class="program-container">
+                    <div class="program">
+                        <h3>Backend Technology</h3>
+                        <p class="description">A comprehensive program designed to provide you with the skills you need for success. Includes hands-on training and expert guidance.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                    <div class="program">
+                        <h3>Frontend Technology</h3>
+                        <p class="description">An advanced program focused on deepening your knowledge and expertise. Ideal for those looking to take their skills to the next level.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                    <div class="program">
+                        <h3>Fullstack Technology</h3>
+                        <p class="description">A specialized program offering in-depth training on specific topics. Perfect for professionals seeking targeted skill development.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+					<div class="program">
+                        <h3>DevOps</h3>
+                        <p class="description">A specialized program offering in-depth training on specific topics. Perfect for professionals seeking targeted skill development.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+		{% endblock %}
