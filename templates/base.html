@@ -2,18 +2,20 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
+   <link rel="stylesheet" href="{{url_for("static", filename="styles.css")}}" />
    <title>{%block title %}SmartDesk{% endblock %}</title>
 </head>
-<body><header>
+<body>
+   
+   <header>
       <div>
         <nav>
-          <a href="#">Product</a>
-          <a href="#">Solutions</a>
-          <a href="#">Benefits</a>
-          <a href="#">Services</a>
-          <a href="#">Resources</a>
-          <a href="#">Company</a>
-          <a href="#">Pricing</a>
+          <a href="#">Home</a>
+          <a href="#">Clients</a>
+          <a href="#">Blog</a>
+          <a href="#">Book Online</a>
+          <a href="#">Plan & Pricing</a>
+          <a href="#">Program List</a>
           <a href="#">Contact Us</a>
         </nav>
       </div>
@@ -25,12 +27,9 @@
         </select>
       </div>
     </header>
-	  <footer>
-      <div></div>
-      <div></div>
-      <div></div>
-    </footer>
-
-   {% block content %}{% endblock %}
+   {% block content %}
+   {% endblock %}
+   
+   
 </body>
 </html>
