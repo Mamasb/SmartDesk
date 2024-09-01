@@ -1,0 +1,56 @@
+ {% extends "base.html" %}
+{% block title %} Plan and Pricing{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{url_for("static", filename="planNpricing.css")}}" />
+ <main>
+        <div class="container">
+            <section id="pricing">
+                <h2>Choose Your Plan</h2>
+                <div class="plan-container">
+				    <div class="plan">
+                        <h3>Free</h3>
+                        <p class="price">$0</p>
+                        <ul>
+                            <li>No consultation</li>
+							<li>Email support</li>
+                            <li>Limited resources</li>
+                        </ul>
+                        <button type="button">Select</button>
+                    </div>
+                    <div class="plan">
+                        <h3>Basic Plan</h3>
+                        <p class="price">$49</p>
+                        <ul>
+                            <li>1-hour consultation</li>
+                            <li>Email support</li>
+                            <li>Basic resources</li>
+                        </ul>
+                        <button type="button">Select</button>
+                    </div>
+                    <div class="plan">
+                        <h3>Standard Plan</h3>
+                        <p class="price">$99</p>
+                        <ul>
+                            <li>2-hour consultation</li>
+                            <li>Phone and email support</li>
+                            <li>Extended resources</li>
+                        </ul>
+                        <button type="button">Select</button>
+                    </div>
+                    <div class="plan">
+                        <h3>Premium Plan</h3>
+                        <p class="price">$149</p>
+                        <ul>
+                            <li>3-hour consultation</li>
+                            <li>24/7 support</li>
+                            <li>Comprehensive resources</li>
+                            <li>Priority scheduling</li>
+                        </ul>
+                        <button type="button">Select</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+	{% endblock %}
