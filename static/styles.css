@@ -68,8 +68,9 @@ main {
   text-align: center;
   background-color: white;
   margin: 20px auto;
-  max-width: 800px;
+  max-width: 850px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ 
   border-radius: 8px;
 }
 
@@ -87,205 +88,110 @@ main p {
 
 /* Footer Styling */
 footer {
-  background-color: #4a90e2;
-  color: white;
-  padding: 30px;
-  display: flex;
-  justify-content: space-between;
+    background-color: #4a90e2;
+    color: white;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
-footer div {
-  width: 30%;
-  text-align: center;
+/* Individual Footer Section */
+.footer-section {
+    width: 22%; /* Adjusted width to fit more sections */
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-footer div:first-child {
-  border-right: 1px solid #ccc;
+/* Header and Links Styling */
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
-footer div:last-child {
-  border-left: 1px solid #ccc;
-}
-/* Signup Form Styling */
-#signup {
-  background-color: #ffffff;
-  padding: 40px;
-  margin: 50px auto;
-  width: 100%;
-  max-width: 450px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  text-align: center;
+.footer-section p {
+    margin-bottom: 10px;
+    font-size: 0.9em;
 }
 
-#signup h2 {
-  margin-bottom: 25px;
-  color: #4a90e2;
-  font-size: 1.8em;
-  font-weight: bold;
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-/* Form Group Styling */
-.form-group {
-  margin-bottom: 20px;
-  text-align: left;
+.footer-section ul li {
+    margin-bottom: 10px;
 }
 
-/* Label Styling */
-.form-group label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-  color: #333;
+.footer-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-/* Input Field Styling */
-.form-group input {
-  width: 100%;
-  padding: 12px 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 1em;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+.footer-link:hover {
+    color: #ffcb05;
 }
 
-/* Input Field Hover and Focus Effects */
-.form-group input:hover,
-.form-group input:focus {
-  border-color: #4a90e2;
-  box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
-  outline: none;
+.social-link {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+    transition: color 0.3s ease;
 }
 
-/* Button Styling */
-button[type="submit"] {
-  background-color: #4a90e2;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1.1em;
-  transition: background-color 0.3s ease;
-  width: 100%;
-  margin-top: 10px;
-  font-weight: bold;
+.social-link:hover {
+    color: #ffcb05;
 }
 
-/* Button Hover Effect */
-button[type="submit"]:hover {
-  background-color: #357ABD;
+/* Newsletter Form Styling */
+.newsletter-form {
+    display: center;
+    flex-direction: column;
+	    width: 100%;
+		
+}
+
+.newsletter-form input[type="email"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.newsletter-form button {
+    background-color: #ffcb05;
+    color: #4a90e2;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #f2b600;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  #signup {
-    padding: 30px;
-    margin: 30px auto;
-  }
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  #signup h2 {
-    font-size: 1.6em;
-  }
-}
-/* Login Form Styling */
-#login {
-  background-color: #ffffff;
-  padding: 40px;
-  margin: 50px auto;
-  width: 100%;
-  max-width: 400px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  text-align: center;
-  position: relative; /* For better positioning */
-  transition: all 0.3s ease; /* Smooth transition for hover effects */
-}
-
-/* Header Styling for Form */
-#login h2 {
-  margin-bottom: 20px;
-  color: #4a90e2;
-  font-size: 1.8em;
-  font-weight: bold;
-}
-
-/* Form Group Styling */
-#login .form-group {
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-/* Label Styling */
-#login .form-group label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-  color: #333;
-}
-
-/* Input Field Styling */
-#login .form-group input {
-  width: 100%;
-  padding: 12px 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 1em;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  outline: none;
-}
-
-/* Input Hover and Focus Effects */
-#login .form-group input:hover,
-#login .form-group input:focus {
-  border-color: #4a90e2;
-  box-shadow: 0 0 8px rgba(74, 144, 226, 0.2);
-}
-
-/* Button Styling */
-#login button[type="submit"] {
-  background-color: #4a90e2;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1.1em;
-  width: 100%;
-  font-weight: bold;
-  margin-top: 10px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-/* Button Hover Effect */
-#login button[type="submit"]:hover {
-  background-color: #357ABD;
-  transform: translateY(-2px); /* Slight lift effect on hover */
-}
-
-/* Forgot Password Link Styling */
-#login .forgot-password {
-  display: block;
-  margin-top: 15px;
-  color: #4a90e2;
-  text-decoration: none;
-  font-size: 0.9em;
-  transition: color 0.3s ease;
-}
-
-#login .forgot-password:hover {
-  color: #357ABD;
-  text-decoration: underline;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  #login {
-    padding: 30px;
-    margin: 30px auto;
-  }
-
-  #login h2 {
-    font-size: 1.6em;
-  }
+    .footer-section {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
+    }
 }
