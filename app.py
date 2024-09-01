@@ -29,6 +29,37 @@ def TeachersDashboard():
 @app.route("/ParentsDashboard")
 def ParentsDashboard():
     return render_template("ParentsDashboard.html")
+    
+@app.route("/client")
+def client():
+    return render_template("client.html")
+    
+@app.route("/blog")
+def blog():
+    return render_template("blog.html")
+    
+@app.route("/book")
+def book():
+    return render_template("book.html")
+    
+@app.route("/planNpricing")
+def planNpricing():
+    return render_template("planNpricing.html")
+ 
+   
+@app.route("/ProgramList")
+def ProgramList():
+    return render_template("ProgramList.html")
+
+@app.route("/contactUs")
+def contactUs():
+    return render_template("contactUs.html")
+    
+@app.route("/members")
+def members():
+    return render_template("members.html")
+
+
 
 
 if __name__ in  "__main__":
