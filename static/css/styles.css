@@ -1,3 +1,4 @@
+
 /* General Reset */
 * {
   margin: 0;
@@ -29,6 +30,8 @@ header nav a {
   margin: 0 15px;
   font-weight: bold;
   transition: color 0.3s ease;
+
+    
 }
 
 header nav a:hover {

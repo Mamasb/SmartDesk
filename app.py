@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,request
 
 app = Flask(__name__)
 
@@ -10,10 +10,19 @@ def index():
 def signup():
     return render_template("signup.html")
     
-@app.route("/login")
+@app.route('/login', methods=['GET', 'POST'])  # Ensure both GET and POST are allowed
 def login():
-    return render_template("login.html")
-    
+    if request.method == 'GET':
+        return render_template('login.html')  # Ensure this file exists in the 'templates' folder
+    elif request.method == 'POST':
+        email = request.form.get('email')
+        password = request.form.get('password')
+
+        if email == 'kijanamgeni2@gmail.com' and password == 'twendeVasha@2025':
+            return 'Welcome to the members Area'
+        else:
+            return 'Incorrect Email or Password'
+       
 @app.route("/admin")
 def admin():
     return render_template("admin.html")

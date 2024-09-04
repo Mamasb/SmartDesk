@@ -1,15 +1,5 @@
 
 
-/* Main Content Styling */
-main {
-  padding: 40px;
-  background-color: white;
-  margin: 20px auto;
-  max-width: 1200px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-}
-
 /* Contact Form Styling */
 #contact-form {
   text-align: center;

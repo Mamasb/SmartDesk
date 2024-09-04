@@ -3,8 +3,13 @@
 {% block title %} Index Page {% endblock %}
 
 {% block content %}
-    
-    <main>
+<link rel="stylesheet" href="{{url_for('static', filename='css/client.css')}}" />
+<link rel="stylesheet" href="{{url_for("static", filename="css/book.css")}}" />
+<link rel="stylesheet" href="{{url_for("static", filename="css/planNpricing.css")}}" />
+<link rel="stylesheet" href="{{url_for("static", filename="css/ProgramList.css")}}" />
+
+<main>
+<!-- Home Section -->
       <h1>Consistently Best Rated School Management System</h1>
       <p>SmartDesk School Management System with everything you need, all brought together.</p>
       <p>
@@ -13,6 +18,181 @@
       <p>
         SmartDesks adapts to your workflows and helps educational institutions meet the demands of contemporary education, ensuring administrators, educators, and students thrive in a supportive and efficient environment.
       </p>
-    </main>
+<!-- Clients Section -->
+<section id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <img src="{{ url_for('static', filename='img/jane_doe.jpg') }}" alt="Jane Doe Photo" class="testimonial-photo">
+                <blockquote>
+                    "This service has transformed our approach to education. Highly recommend!"
+                </blockquote>
+                <footer>Jane Doe, Educator</footer>
+            </div>
+            <div class="testimonial">
+                <img src="{{ url_for('static', filename='img/john_smith.jpg') }}" alt="John Smith Photo" class="testimonial-photo">
+                <blockquote>
+                    "A game-changer in student management. Excellent support and features."
+                </blockquote>
+                <footer>John Smith, School Administrator</footer>
+            </div>
+            <div class="testimonial">
+                <img src="{{ url_for('static', filename='img/emily_johnson.jpg') }}" alt="Emily Johnson Photo" class="testimonial-photo">
+                <blockquote>
+                    "The intuitive interface and powerful tools have made our job so much easier."
+                </blockquote>
+                <footer>Emily Johnson, Teacher</footer>
+            </div>
+            <div class="testimonial">
+                <img src="{{ url_for('static', filename='img/michael_brown.jpg') }}" alt="Michael Brown Photo" class="testimonial-photo">
+                <blockquote>
+                    "Fantastic experience! The system is user-friendly and very effective."
+                </blockquote>
+                <footer>Michael Brown, Principal</footer>
+            </div>
+            <div class="testimonial">
+                <img src="{{ url_for('static', filename='img/linda_davis.jpg') }}" alt="Linda Davis Photo" class="testimonial-photo">
+                <blockquote>
+                    "Exceptional service with great customer support. Highly recommended."
+                </blockquote>
+                <footer>Linda Davis, School Manager</footer>
+            </div>
+            <div class="testimonial">
+                <img src="{{ url_for('static', filename='img/david_wilson.jpg') }}" alt="David Wilson Photo" class="testimonial-photo">
+                <blockquote>
+                    "An invaluable tool for our educational institution. It's been a huge help."
+                </blockquote>
+                <footer>David Wilson, Education Consultant</footer>
+            </div>
+        </div>
+    </section>
+<!-- Book Online Section -->
+<div class="container">
+            <section id="booking-form">
+                <h2>Schedule Your Appointment</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Preferred Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Preferred Time</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Additional Information</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit">Book Now</button>
+                </form>
+            </section>
+            <aside id="services">
+                <h2>Our Services</h2>
+                <div class="service">
+                    <h3>Consultation</h3>
+                    <p>Get expert advice and guidance tailored to your needs.</p>
+                </div>
+                <div class="service">
+                    <h3>Training</h3>
+                    <p>Attend training sessions to improve your skills and knowledge.</p>
+                </div>
+                <div class="service">
+                    <h3>Support</h3>
+                    <p>Receive ongoing support and assistance whenever you need it.</p>
+                </div>
+            </aside>
+        </div>
+<!-- Plan & Pricing Section -->
+<div class="container">
+            <section id="pricing">
+                <h2>Choose Your Plan</h2>
+                <div class="plan-container">
+				    <div class="plan">
+                        <h3>Free</h3>
+                        <p class="price">$0</p>
+                        <ul>
+                            <li>No consultation</li>
+							<li>Email support</li>
+                            <li>Limited resources</li>
+                        </ul>
+                        <button type="button">Select</button>
+                    </div>
+                    <div class="plan">
+                        <h3>Basic Plan</h3>
+                        <p class="price">$49</p>
+                        <ul>
+                            <li>1-hour consultation</li>
+                            <li>Email support</li>
+                            <li>Basic resources</li>
+                        </ul>
+                        <button type="button">Select</button>
+                    </div>
+                    <div class="plan">
+                        <h3>Standard Plan</h3>
+                        <p class="price">$99</p>
+                        <ul>
+                            <li>2-hour consultation</li>
+                            <li>Phone and email support</li>
+                            <li>Extended resources</li>
+                        </ul>
+                        <button type="button">Select</button>
+                    </div>
+                    <div class="plan">
+                        <h3>Premium Plan</h3>
+                        <p class="price">$149</p>
+                        <ul>
+                            <li>3-hour consultation</li>
+                            <li>24/7 support</li>
+                            <li>Comprehensive resources</li>
+                            <li>Priority scheduling</li>
+                        </ul>
+                        <button type="button">Select</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+<!-- Program List Section -->
+      <div class="container">
+            <section id="program-list">
+                <h2>Our Programs</h2>
+                <div class="program-container">
+                    <div class="program">
+                        <h3>Backend Technology</h3>
+                        <p class="description">A comprehensive program designed to provide you with the skills you need for success. Includes hands-on training and expert guidance.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                    <div class="program">
+                        <h3>Frontend Technology</h3>
+                        <p class="description">An advanced program focused on deepening your knowledge and expertise. Ideal for those looking to take their skills to the next level.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                    <div class="program">
+                        <h3>Fullstack Technology</h3>
+                        <p class="description">A specialized program offering in-depth training on specific topics. Perfect for professionals seeking targeted skill development.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+					<div class="program">
+                        <h3>DevOps</h3>
+                        <p class="description">A specialized program offering in-depth training on specific topics. Perfect for professionals seeking targeted skill development.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+</main>
     
 {% endblock %}
