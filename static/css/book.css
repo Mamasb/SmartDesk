@@ -1,6 +1,3 @@
-
-
-
 /* Main Content Styling */
 main {
   padding: 40px 20px;
@@ -20,9 +17,9 @@ main {
 }
 
 #booking-form h2 {
-  font-size: 2.2em;
+
   margin-bottom: 20px;
-  color: #007bff;
+ 
   text-align: center;
 }
 
@@ -73,9 +70,9 @@ button[type="submit"]:hover {
 }
 
 #services h2 {
-  font-size: 2.2em;
+
   margin-bottom: 20px;
-  color: #007bff;
+
   text-align: center;
 }
 
@@ -88,9 +85,9 @@ button[type="submit"]:hover {
 }
 
 .service h3 {
-  font-size: 1.6em;
+
   margin-bottom: 10px;
-  color: #333;
+
 }
 
 .service p {
