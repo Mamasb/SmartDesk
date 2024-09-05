@@ -1,40 +1,104 @@
-{% extends "base.html" %}
-{% block title %} blog {% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="{{url_for("static", filename="css/styles.css")}}" />
+   <link rel="stylesheet" href="{{url_for("static", filename="css/blog.css")}}" />
+<title>{%block title %}SmartDesk{% endblock %}</title>
+</head>
+<body>
+   
+   <header>
+      <div>
+        <nav>
+          <a href="{{url_for('index') }}">Home</a>
+        </nav>
+      </div>
+      <div>
+        <a href="{{url_for('members') }}"><button>Members Area</button></a>
+        <a href="{{url_for('signup') }}"><button>signup</button></a>
+      </div>
+    </header>
 
-{% block content %}
-<link rel="stylesheet" href="{{url_for("static", filename="css/blog.css")}}" />
    <main>
         <section id="blog-posts" class="container">
             <h2>Latest Posts</h2>
             <div class="post-grid">
                 <article class="post">
-                    <img src="https://via.placeholder.com/600x400" alt="Post Image">
+                    <img src="{{ url_for('static', filename='img/innovative.jpg') }}"  alt="Post Image">
                     <div class="post-content">
                         <h3><a href="#">Innovative Trends in Education</a></h3>
-                        <p class="meta">September 1, 2024 by Jane Doe</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p class="meta">September 5, 2024 by Philip Kahihu</p>
+                        <p>
+Innovative trends in education are transforming the way we teach and learn by embracing personalized learning, blended and hybrid models, and technology-driven methods. Personalized learning uses AI and data analytics to tailor educational experiences to individual students' needs and paces, enhancing engagement and outcomes. Blended learning combines traditional and online instruction for greater flexibility and accessibility, while technology, including AI tutors, virtual reality (VR), and gamification, is being integrated to create immersive and interactive learning environments. These trends are reshaping education to be more adaptive, inclusive, and effective for diverse learners</p>
                         <a href="#" class="read-more">Read More</a>
                     </div>
                 </article>
                 <article class="post">
-                    <img src="https://via.placeholder.com/600x400" alt="Post Image">
+                     <img src="{{ url_for('static', filename='img/online.jpg') }}"  alt="Post Image">
                     <div class="post-content">
                         <h3><a href="#">The Future of Online Learning</a></h3>
-                        <p class="meta">August 15, 2024 by John Smith</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p class="meta">September 4, 2024 by Kijana Mgeni</p>
+                        <p>The future of online learning will be shaped by increased personalization and adaptive learning, where AI and data analytics tailor content to individual students' needs and learning styles. This evolution will also see more immersive and interactive experiences through technologies like virtual reality (VR) and augmented reality (AR), enhancing engagement and practical skills. Additionally, there will be a focus on micro-credentials and modular learning, allowing learners to acquire specific skills and certifications flexibly. As online education continues to advance, it promises to be more accessible, inclusive, and aligned with the demands of a rapidly changing world.</p>
                         <a href="#" class="read-more">Read More</a>
                     </div>
                 </article>
                 <article class="post">
-                    <img src="https://via.placeholder.com/600x400" alt="Post Image">
+                    <img src="{{ url_for('static', filename='img/digital.jpg') }}"   alt="Post Image">
                     <div class="post-content">
                         <h3><a href="#">How to Engage Students in the Digital Age</a></h3>
-                        <p class="meta">July 30, 2024 by Emma Brown</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p class="meta">September , 2024 by Philip Mwangi</p>
+                        <p>
+To engage students in the digital age, educators need to leverage interactive technology, foster collaboration, and adapt to diverse learning styles. Using digital tools like interactive quizzes, educational games, and virtual simulations can make learning more dynamic and engaging. Encouraging collaboration through digital platforms and social learning tools also helps students feel connected and involved. Additionally, incorporating multimedia content and real-world applications helps cater to different learning preferences and keeps students motivated. These strategies create a more interactive, personalized, and engaging learning experience for digital-age students.</p>
                         <a href="#" class="read-more">Read More</a>
                     </div>
                 </article>
             </div>
         </section>
     </main>
-{% endblock %}
+<footer>
+    <div class="footer-section">
+        <h3>About Us</h3>
+        <p>We are committed to providing the best educational resources and tools for schools and students. Our mission is to enhance learning experiences through innovative technology.</p>
+    </div>
+    <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email: support@example.com</p>
+        <p>Phone: +123 456 7890</p>
+        <p>Address: 123 Education Lane, Learning City, LC 45678</p>
+    </div>
+    <div class="footer-section">
+        <h3>Follow Us</h3>
+        <a href="https://www.facebook.com" target="_blank" class="social-link">Facebook</a>
+        <a href="https://www.twitter.com" target="_blank" class="social-link">Twitter</a>
+        <a href="https://www.instagram.com" target="_blank" class="social-link">Instagram</a>
+        <a href="https://www.linkedin.com" target="_blank" class="social-link">LinkedIn</a>
+    </div>
+    <div class="footer-section">
+        <h3>Services</h3>
+        <ul>
+            <li><a href="/services/school-management" class="footer-link">School Management</a></li>
+            <li><a href="/services/student-portal" class="footer-link">Student Portal</a></li>
+            <li><a href="/services/teacher-tools" class="footer-link">Teacher Tools</a></li>
+            <li><a href="/services/parent-access" class="footer-link">Parent Access</a></li>
+        </ul>
+    </div>
+    <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="/about-us" class="footer-link">About Us</a></li>
+            <li><a href="/contact" class="footer-link">Contact</a></li>
+            <li><a href="/faq" class="footer-link">FAQ</a></li>
+            <li><a href="/privacy-policy" class="footer-link">Privacy Policy</a></li>
+        </ul>
+    </div>
+    <div class="footer-section">
+        <h3>Newsletter Signup</h3>
+        <form action="/subscribe" method="post" class="newsletter-form">
+            <input type="email" name="email" placeholder="Your email address" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</footer>
+</body>
+</html>
