@@ -10,11 +10,11 @@
    <header>
       <div>
         <nav>
-          <a href="#">Home</a>
+          <a href="{{url_for('index') }}">Home</a>
 		  <a href="#program-list">Program List</a>
 		   <a href="#booking-form">Book Online</a>
           <a href="#testimonials">Clients</a>
-          <a href="#blog.html">Blog</a>
+          <a href="{{url_for('blog') }}">Blog</a>
          
          
          
@@ -22,11 +22,9 @@
         </nav>
       </div>
       <div>
-        <button>Members Area</button>
-        <select>
-          <option>Register</option>
-          <option>Login</option>
-        </select>
+	
+      <a href="{{url_for('members') }}"><button>Members Area</button></a>
+      <a href="{{url_for('signup') }}"><button>Register</button></a>
       </div>
     </header>
 	
