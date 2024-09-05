@@ -24,35 +24,21 @@
         <section id="blog-posts" class="container">
             <h2>Latest Posts</h2>
             <div class="post-grid">
+                {% for post in posts %}
                 <article class="post">
-                    <img src="{{ url_for('static', filename='img/innovative.jpg') }}"  alt="Post Image">
+                    {% if post.image_filename %}
+                        <img src="{{ url_for('static', filename='img/' ~ post.image_filename) }}" alt="Post Image">
+                    {% else %}
+                        <img src="{{ url_for('static', filename='img/default.jpg') }}" alt="Default Post Image">
+                    {% endif %}
                     <div class="post-content">
-                        <h3><a href="#">Innovative Trends in Education</a></h3>
-                        <p class="meta">September 5, 2024 by Philip Kahihu</p>
-                        <p>
-Innovative trends in education are transforming the way we teach and learn by embracing personalized learning, blended and hybrid models, and technology-driven methods. Personalized learning uses AI and data analytics to tailor educational experiences to individual students' needs and paces, enhancing engagement and outcomes. Blended learning combines traditional and online instruction for greater flexibility and accessibility, while technology, including AI tutors, virtual reality (VR), and gamification, is being integrated to create immersive and interactive learning environments. These trends are reshaping education to be more adaptive, inclusive, and effective for diverse learners</p>
+                        <h3><a href="#">{{ post.title }}</a></h3>
+                        <p class="meta">{{ post.date_posted.strftime('%B %d, %Y') }} by {{ post.author }}</p>
+                        <p>{{ post.content[:150] }}...</p>
                         <a href="#" class="read-more">Read More</a>
                     </div>
                 </article>
-                <article class="post">
-                     <img src="{{ url_for('static', filename='img/online.jpg') }}"  alt="Post Image">
-                    <div class="post-content">
-                        <h3><a href="#">The Future of Online Learning</a></h3>
-                        <p class="meta">September 4, 2024 by Kijana Mgeni</p>
-                        <p>The future of online learning will be shaped by increased personalization and adaptive learning, where AI and data analytics tailor content to individual students' needs and learning styles. This evolution will also see more immersive and interactive experiences through technologies like virtual reality (VR) and augmented reality (AR), enhancing engagement and practical skills. Additionally, there will be a focus on micro-credentials and modular learning, allowing learners to acquire specific skills and certifications flexibly. As online education continues to advance, it promises to be more accessible, inclusive, and aligned with the demands of a rapidly changing world.</p>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
-                </article>
-                <article class="post">
-                    <img src="{{ url_for('static', filename='img/digital.jpg') }}"   alt="Post Image">
-                    <div class="post-content">
-                        <h3><a href="#">How to Engage Students in the Digital Age</a></h3>
-                        <p class="meta">September , 2024 by Philip Mwangi</p>
-                        <p>
-To engage students in the digital age, educators need to leverage interactive technology, foster collaboration, and adapt to diverse learning styles. Using digital tools like interactive quizzes, educational games, and virtual simulations can make learning more dynamic and engaging. Encouraging collaboration through digital platforms and social learning tools also helps students feel connected and involved. Additionally, incorporating multimedia content and real-world applications helps cater to different learning preferences and keeps students motivated. These strategies create a more interactive, personalized, and engaging learning experience for digital-age students.</p>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
-                </article>
+                {% endfor %}
             </div>
         </section>
     </main>
