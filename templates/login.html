@@ -1,23 +1,90 @@
-{% extends "base.html" %}
-{% block title %} Login {% endblock %}
-{% block content %}
-<link rel="stylesheet" href="{{url_for("static", filename="css/login.css")}}" />
-<!-- Login Form -->
-<section id="login">
-    <h2>Login</h2>
-    <form action="{{ url_for('login') }}" method="POST">  <!-- Changed 'index' to 'login' -->
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members Area</title>
+    <link rel="stylesheet" href="{{url_for("static", filename="css/members.css")}}" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+    <script type="text/javascript">
+        window.tailwind.config = {
+            darkMode: ['class'],
+            theme: {
+                extend: {
+                    colors: {
+                        border: 'hsl(var(--border))',
+                        input: 'hsl(var(--input))',
+                        ring: 'hsl(var(--ring))',
+                        background: 'hsl(var(--background))',
+                        foreground: 'hsl(var(--foreground))',
+                        primary: {
+                            DEFAULT: 'hsl(var(--primary))',
+                            foreground: 'hsl(var(--primary-foreground))'
+                        },
+                        secondary: {
+                            DEFAULT: 'hsl(var(--secondary))',
+                            foreground: 'hsl(var(--secondary-foreground))'
+                        },
+                        destructive: {
+                            DEFAULT: 'hsl(var(--destructive))',
+                            foreground: 'hsl(var(--destructive-foreground))'
+                        },
+                        muted: {
+                            DEFAULT: 'hsl(var(--muted))',
+                            foreground: 'hsl(var(--muted-foreground))'
+                        },
+                        accent: {
+                            DEFAULT: 'hsl(var(--accent))',
+                            foreground: 'hsl(var(--accent-foreground))'
+                        },
+                        popover: {
+                            DEFAULT: 'hsl(var(--popover))',
+                            foreground: 'hsl(var(--popover-foreground))'
+                        },
+                        card: {
+                            DEFAULT: 'hsl(var(--card))',
+                            foreground: 'hsl(var(--card-foreground))'
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<div>
+   
+<body>
+    <div class="flex items-center justify-center min-h-screen bg-background">
+        <div class="bg-card rounded-lg shadow-lg p-8 w-96">
+            <div class="text-center mb-6">
+                <h1 class="text-3xl font-bold text-primary">SmartDesk</h1>
+            </div>
+            <form>
+                <div class="mb-4">
+                    <label class="block text-muted-foreground mb-2" for="email">Email</label>
+                    <input class="w-full p-2 border border-border rounded focus:outline-none focus:ring focus:ring-ring" type="email" id="email" placeholder="Enter your email" required />
+                </div>
+                <div class="mb-4">
+                    <label class="block text-muted-foreground mb-2" for="password">Password</label>
+                    <input class="w-full p-2 border border-border rounded focus:outline-none focus:ring focus:ring-ring" type="password" id="password" placeholder="Enter your password" required />
+                </div>
+                <div class="flex items-center mb-4">
+                    <input type="checkbox" id="remember" class="mr-2" />
+                    <label for="remember" class="text-muted-foreground">Remember me</label>
+                </div>
+                <button type="submit" class="w-full bg-secondary text-secondary-foreground hover:bg-secondary/80 p-2 rounded-lg">Log in</button>
+            </form>
+            <div class="text-center mt-4">
+                <a href="#" class="text-accent">Forgot your password?</a>
+            </div>
+			<div class="text-center mt-4">
+                <a href="{{url_for('signup') }}">Signup</a>
+            </div>
+            <div class="text-center mt-6 text-muted-foreground">
+                <p>Copyright © 2024 SmartDesk. All rights reserved.</p>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-        </div>
-        <div class="form-actions">
-            <button type="submit">Login</button>
-            <a href="#" class="forgot-password">Forgot Password?</a>
-        </div>
-    </form>
-</section>
-{% endblock %}
+    </div>
+</body>
+</html>
