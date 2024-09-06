@@ -22,14 +22,6 @@ class Blogpost(db.Model):
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS']
 
-@app.route("/")
-def index():
-    return render_template("index.html")
-
-@app.route("/signup")
-def signup():
-    return render_template("signup.html")
-
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'GET':
@@ -41,26 +33,6 @@ def login():
             return 'Welcome to the members Area'
         else:
             return 'Incorrect Email or Password'
-
-@app.route("/admin")
-def admin():
-    return render_template("admin.html")
-
-@app.route("/StudentPortal")
-def StudentPortal():
-    return render_template("StudentPortal.html")
-
-@app.route("/TeachersDashboard")
-def TeachersDashboard():
-    return render_template("TeachersDashboard.html")
-
-@app.route("/ParentsDashboard")
-def ParentsDashboard():
-    return render_template("ParentsDashboard.html")
-
-@app.route("/client")
-def client():
-    return render_template("client.html")
 
 @app.route("/blog", methods=['GET', 'POST'])
 def blog():
@@ -106,26 +78,47 @@ def add_blogpost():
         return redirect(url_for('blog'))
 
     return render_template("add_blogpost.html")
-
+@app.route("/")
+def index():
+    return render_template("index.html")
+    
+@app.route("/ProgramList")
+def ProgramList():
+    return render_template("ProgramList.html")
+    
 @app.route("/book")
 def book():
     return render_template("book.html")
 
-@app.route("/planNpricing")
-def planNpricing():
-    return render_template("planNpricing.html")
-
-@app.route("/ProgramList")
-def ProgramList():
-    return render_template("ProgramList.html")
-
-@app.route("/contactUs")
-def contactUs():
-    return render_template("contactUs.html")
+@app.route("/client")
+def client():
+    return render_template("client.html")
 
 @app.route("/members")
 def members():
     return render_template("members.html")
+
+@app.route("/signup")
+def signup():
+    return render_template("signup.html")
+
+
+@app.route("/admin")
+def admin():
+    return render_template("admin.html")
+
+@app.route("/StudentPortal")
+def StudentPortal():
+    return render_template("StudentPortal.html")
+
+@app.route("/TeachersDashboard")
+def TeachersDashboard():
+    return render_template("TeachersDashboard.html")
+
+@app.route("/ParentsDashboard")
+def ParentsDashboard():
+    return render_template("ParentsDashboard.html")
+
 
 # Ensure the upload folder exists
 if not os.path.exists(app.config['UPLOAD_FOLDER']):
