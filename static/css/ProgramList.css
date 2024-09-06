@@ -3,6 +3,7 @@
 /* Main Content Styling */
 main {
   padding: 40px 20px;
+  
 }
 
 .container {
@@ -13,6 +14,7 @@ main {
 /* Program List Section */
 #program-list {
   text-align: center;
+  
 }
 
 #program-list h2 {
@@ -26,6 +28,7 @@ main {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  
 }
 
 .program {
@@ -38,6 +41,7 @@ main {
   min-width: 250px;
   max-width: 350px;
   margin: 10px;
+  
 }
 
 .program h3 {
@@ -117,5 +121,3 @@ footer .container {
   color: #ffcb05;
 }
 
-/* Responsive Adjustments */
-@media (
