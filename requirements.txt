@@ -71,7 +71,8 @@ pycodestyle==2.8.0
 pycparser==2.22
 PyGObject==3.42.1
 PyJWT==2.3.0
-PyMuPDF==1.24.4  # Or PyMuPDFb==1.24.3, choose one
+PyMuPDF==1.24.4
+PyMuPDFb==1.24.3
 PyNaCl==1.5.0
 pypandoc==1.13
 pyparsing==2.4.7
@@ -93,7 +94,6 @@ six==1.16.0
 soupsieve==2.5
 SQLAlchemy==2.0.31
 sqlparse==0.4.4
-systemd-python==234
 termcolor==2.4.0
 texttable==1.6.4
 toml==0.10.2
