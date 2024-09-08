@@ -116,4 +116,4 @@ websocket-client==0.59.0
 Werkzeug==3.0.1
 zenmap===7.94SVN
 zipp==1.0.0
-gunicon
+gunicorn
